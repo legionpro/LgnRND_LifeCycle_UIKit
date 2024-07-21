@@ -58,7 +58,17 @@ class RootViewController: UIViewController {
         super.viewDidDisappear( animated )
         DebugPrint.debugPrint()
     }
-
+    
+    
+///   Cannot override 'viewWillUnload' which has been marked unavailable: APIs deprecated as of iOS 7 and earlier are unavailable in Swift
+//
+//    override func viewWillUnload() {
+//
+//    }
+//
+//    override func viewDidUnload() {
+//
+//    }
 }
 
 extension RootViewController {
