@@ -18,6 +18,11 @@ class RootViewController: UIViewController {
         super.init(coder: coder)
         DebugPrint.debugPrint()
     }
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        DebugPrint.debugPrint()
+    }
 
     override func loadViewIfNeeded() {
         super.loadViewIfNeeded()
