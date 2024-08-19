@@ -8,8 +8,13 @@
 import Foundation
 
 class DebugPrint {
-    static func debugPrint(file: String = #file, line: Int = #line, function: String = #function) {
-        print ("--- \(file):\(line) : \(function)")
+    static var printFlagA: Bool = false
+    static var printFlagB: Bool = false
+    
+    static func debugPrint(file: String = #file, line: Int = #line, function: String = #function, flag: Bool = true) {
+        if flag {
+            print ("--- \(file):\(line) : \(function)")
+        }
     }
 }
 
