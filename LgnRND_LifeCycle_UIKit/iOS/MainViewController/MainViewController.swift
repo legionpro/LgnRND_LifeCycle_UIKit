@@ -46,13 +46,15 @@ class MainViewController: RootViewController {
         DebugPrint.debugPrint(flag: DebugPrint.printFlagB)
         super.awakeFromNib()
     }
+    @IBAction func gotToFromStoryBoard(_ sender: Any) {
+        DebugPrint.debugPrint(flag: DebugPrint.printFlagB)
+        let storyboard = UIStoryboard(name: "xViewControllerStrb", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "xViewController_")
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func gotToVCFromXib(_ sender: Any) {
-
-       // in case of storyboard
-       //let storyboard = UIStoryboard(name: "xViewControllerStrb", bundle: nil)
-       //let vc = storyboard.instantiateViewController(withIdentifier: "xViewController")
-                    
+        DebugPrint.debugPrint(flag: DebugPrint.printFlagB)
        // in case of xib
        let vc = XibViewController(nibName: "XibViewController", bundle: nil)
                                    
